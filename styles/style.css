@@ -11,5 +11,70 @@ body {
 
 /* Header */
 header {
+  background-color: #06365f;
+  height: 300px;
+}
+
+/* Main Section */
+#main-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 60px;
+}
+
+.col-left {
+  flex-basis: 25%;
+}
+
+.col-right {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right column */
+.brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.col-left .instagram-brand{
+  flex-basis: 75%
+}
+
+.col-right .login-btn {
+  flex-basis: 15%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
   background-color: #1c5380;
+  padding: 5px;
+}
+
+article {
+  position: relative;
+  padding: 10px 30px;
+}
+
+article::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 50%;
+  border-top: 1px solid red;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow: 10px 0 5px -2px #888;
 }
