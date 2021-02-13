@@ -34,47 +34,85 @@ header {
   flex-direction: column;
 }
 
-/* Right column */
-.brand {
+  .col-right .brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    border-bottom: 50px;
+  }
+
+    .col-right .brand .login-btn {
+      flex-basis: 15%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+      background-color: #1c5380;
+      padding: 5px;
+    }
+
+    .col-right .brand .instagram-brand{
+      flex-basis: 75%
+    }
+
+  .col-right article {
+    position: relative;
+    padding: 10px 30px;
+  }
+
+    .col-right article br {
+      display: block;
+      content: "";
+      border-bottom: 10px solid transparent; 
+    }
+
+    .col-right article span {
+      font-weight: bold;
+    }
+
+    .col-right article::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 50%;
+      border-top: 1px solid gainsboro;
+      border-left: 1px solid gainsboro;
+      border-right: 1px solid gainsboro;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    article .btns {
+      margin-top: 50px;
+    }
+
+    article .btns a {
+      margin-right: 10px;
+    }
+
+/* Footer */
+
+.links li {
+  list-style-type: none;
+  margin: 10px;
+  color: grey;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.links li a {
+  text-decoration: none;
+  color: #1c5380;
+}
+
+.links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-}
-
-.col-left .instagram-brand{
-  flex-basis: 75%
-}
-
-.col-right .login-btn {
-  flex-basis: 15%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  color: white;
-  background-color: #1c5380;
-  padding: 5px;
-}
-
-article {
-  position: relative;
-  padding: 10px 30px;
-}
-
-article::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top:0;
-  left:0;
-  width: 100%;
-  height: 50%;
-  border-top: 1px solid red;
-  border-left: 1px solid red;
-  border-right: 1px solid red;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  box-shadow: 10px 0 5px -2px #888;
+  justify-content: center;
+  margin: 50px;
 }
